@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="Style.css"> -->
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*กำหนดสไตล์สำหรับส่วนของเนื้อหาของหน้าเว็บ*/
+body{
+    height: 100vh;
+    background-color: white;
+}
+/*กำหนดสไตล์สำหรับรายการลิสต์ (list items) ในเอกสาร*/
+li{
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: large;
+}
+
+a:hover {
+    color: black;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+/*กำหนดสไตล์สำหรับแถบนำทาง*/
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+/*กำหนดสไตล์สำหรับลิงก์โลโก้*/
+.navbar .Logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+/*กำหนดสไตล์สำหรับรูปภาพโลโก้*/
+.navbar .Logo a img{
+    padding-top: 30px;
+    margin-right: 200px;
+    width: 195px;
+    height: 130px;
+}
+/*กำหนดสไตล์สำหรับกลุ่มลิงก์*/
+.navbar .Link {
+    display: flex;
+    gap: 2rem;
+    margin-left: 140px;
+}
+
+.navbar .Login {
+    background-color: rgb(20, 241, 138);
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 8px 10px;
+}
+/*กำหนดสไตล์สำหรับส่วนข้อมูลอื่น ๆ ในหน้าเว็บ*/
+.art{
+    flex-direction: row;
+    display: flex;
+    border-radius: 20px;
+    cursor: pointer;
+    max-width: 1200px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 150px;
+    padding-bottom: 50px;
+}
+/*กำหนดสไตล์สำหรับรูปภาพในส่วนข้อมูล*/
+.art img {
+    margin-left: 100px;
+    margin-top : 50px;
+    width: auto;
+    height: auto;
+}
+/*กำหนดสไตล์สำหรับข้อความในส่วนข้อมูล*/
+.art .para p{
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-left: 20px;
+    display: block;
+}
+    </style>
+</head>
+<body>
+    
+    <header>
+        <!-- navigationbar -->
+        <div class = "navbar"> 
+            <!-- Logo -->
+            <div class = "Logo"><a href="home.html"><img src="Logo4.png" alt=""></a></div>
+                <!-- แถบ navigationbar -->
+                <ul class = "Link">
+                    <li><a href="">Home</a></li>
+                    <li><a href="Blank_Search">Shop</a></li>
+                    <li><a href="contact">Contact</a></li>
+                </ul>
+            <!-- ปุ่ม login -->
+            <a href="login" class="Login">Login</a>
+        </div>
+    </header>
+
+
+
+    <div class ="art">
+        <!-- รูปภาพของบทความ -->
+        <img src="http://drive.google.com/uc?export=view&id=1qiiSxDRhpS4sTNsO6Hj9A2OeZauveBh0" alt="tea">
+
+        <!-- บทความ -->
+        <div class="para" style="overflow-x: hidden;">
+                <p>ชาเขียวมัทฉะ ผลิตจากใบชาเขียวญี่ปุ่นชั้นดี นำใบชาอ่อน ๆ สดๆ มาผ่านกรรมวิธีบดตามแบบฉบับญี่ปุ่นจนได้ผงชาเขียวมัทฉะ มัทฉะเป็นใบชาบดผงจึงดื่มง่าย
+                    สะดวก อร่อย และได้รับประโยชน์จากใบชาเต็มๆ เพราะเป็นการรับประทานใบชาทั้งใบเมื่อชงผสมน้ำร้อนจะได้ชาที่มีรสชาติอร่อย มีความหอมเฉพาะตัว มีสีเขียวขุ่น 
+                    ไม่ใส และมีตะกอนอยู่บ้าง เป็นเอกลักษณ์เฉพาะตัวชาเขียวมัทฉะสามารถชงดื่มง่าย ดื่มได้ทั้งร้อนและเย็น นอกจากนี้ยังสามารถดัดแปลงเป็นส่วนผสมของไอศกรีม 
+                    สมูตตี้และขนมเบเกอรี่ต่างๆ ได้อีกมากมาย
+                    <br>
+                    <br>
+                    ในชาอุดมไปด้วยสารต้านอนุมูลอิสระกลุ่มโพลีฟีนอล (pholyphenol) หลายตัวช่วยต้านการอักเสบและความเสื่อมในร่างกาย มีบทบาทในการชะลอการเกิดโรคที่มีสาเหตุจากอนุมูลอิสระ 
+                    ซึ่งถือเป็นคุณประโยชน์ของชาที่ช่วยให้สุขภาพแข็งแรงขึ้น ได้แก่ สารแคทเทชิน (catechins) ที่พบมากในชาเขียว คือ สารอีพิกัลโลแคทเทชินกัลเลต (epigallocatechin gallate) 
+                    หรือ EGCG เป็นสารกลุ่มฟลาโวนอยด์ มีฤทธิ์ในการลดการอักเสบและป้องกันความเสียหายของเซลล์ร่างกายจากอนุมูลอิสระ สารแทนนิน (tannins) เช่น สารธีอะฟลาวินส์มีมากที่สุดในชาดำ 
+                    รองลงมาเป็นชาขาว ชาอู่หลง อู่หลง และชาเขียว ตามลำดับ มีฤทธิ์ช่วยต้านอนุมูลอิสระ เป็นสารที่ทำให้รู้สึกรสชาติฝาดและขมซึ่งเป็นเอกลักษณ์ของชา และทำให้ชามีสีเข้ม 
+                    สารต้านอนุมูลอิสระในชาสมุนไพร เช่น สารจินเจอรอล (gingerol) ในชาขิง หรือสารกลุ่มฟลาโวนอยด์ในชาคาโมมายล์ เป็นต้น
+                </p>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

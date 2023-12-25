@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>จัดการข้อมูลสินค้า</title>
+    <!-- <link rel="stylesheet" href="product.css"> -->
+</head>
+<body>
+        <header>
+            <a href="home.html"><h1><B>Home</B></h1></a>
+
+            <style>
+                body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        nav ul {
+            display: inline-block; /* ทำให้รายการอยู่ในบรรทัดเดียวกัน */
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* CSS สำหรับกล่องค้นหาและปุ่มกลับ */
+        .search-box input[type="search"] {
+            padding: 10px;
+            width: 200px; 
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-box button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-box button:hover {
+            background-color: #555;
+        } 
+        .back{
+            text-align: left;
+        }
+        
+      
+         /* CSS สำหรับการจัดการสินค้า */
+         
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        /* CSS สำหรับการเพิ่มผู้ใช้ (Add User) */
+        .page#add-page form {
+            margin-bottom: 20px;
+        }
+
+        .page#add-page label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .page#add-page input[type="text"],
+        .page#add-page input[type="email"],
+        .page#add-page input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .page#add-page button[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .page#add-page button[type="submit"]:hover {
+            background-color: #555;
+        }
+
+
+            </style>
+    </header>
+    
+    <!-- แถบสำหรับเปลี่ยนหน้า -->
+    <nav>
+        <ul>
+             <!--ส่วนนำทาง (nav) ประกอบด้วยแท็ก ul แสดงรายการลิงก์ไปยังหน้าต่างๆ แท็ก li แต่ละรายการแสดงลิงก์ไปยังหน้าต่างๆ-->
+            <li><a href="insertproduct">ใส่ข้อมูล</a></li>
+            <li><a href="updateproduct">การอัปเดตข้อมูล</a></li>
+            <li><a href="deleteproduct">การลบข้อมูลสินค้า</a></li>
+            <li><a href="selectallproduct">แสดงข้อมูล</a></li>
+        </ul>
+        <div class="back">
+            <a href="hyperlink"><button>Back</button></a>
+        </div>
+    </nav>
+    <h1>จัดการข้อมูลสินค้า</h1>
+   
+    <!-- การแสดงข้อมูลของสินค้า -->
+    <div class="page" id="delete-page">
+        <form action="" method="delete">
+            <label for="product_name">ชื่อสินค้า:</label>
+            <input type="text" id="product_name" placeholder="ชื่อสินค้า" required><br><br>
+            <input
+              type="button"
+              class="btn btn-primary"
+              value="Delete"
+              id="delete"
+            />
+        </form>
+    
+    </div>
+
+    <div id="output"></div>
+    <script src="/js/callservicesproductdelete.js"></script>
+</body>
+</html>

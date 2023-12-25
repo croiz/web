@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link rel="stylesheet" href="hyperlink.css"> -->
+
+    <style>
+        /* hyperlink.css */
+/* body{
+    max-width: 1400px;
+    align-items: center;
+} */
+
+/* สไตล์ส่วนหัวเว็บ */
+
+header {
+    text-align: center;
+    background-color: #489d68;
+    color: white;
+    padding: 20px;
+}
+
+/* เว้นระยะห่างขปงปุ่มกับแถบข้างบน */
+nav {
+    margin-top: 50px;
+}
+
+/* สไตล์ปุ่ม Back */
+div.back button{
+    float: left;
+    margin-left: 20px;
+    border-radius: 5px;
+    background-color: black;
+    color: azure;
+}
+
+/* สไตล์ปุ่ม Log-out */
+div.lo button{
+    float: right;
+    margin-right: 20px;
+    border-radius: 5px;
+    background-color: black;
+    color: azure;
+}
+
+/* สไตล์ส่วนข้อมูลสินค้าและข้อมูลผู้ใช้ */
+.first {
+    flex-direction: row;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.one, .two {
+    text-align: center;
+    padding: 20px;
+}
+
+.one {
+    background-color: #f2f2f2;
+    margin-right: 50px;
+}
+
+.two {
+    background-color: #f2f2f2;
+    margin-left: 50px;
+}
+
+/* สไตล์ลิงก์ภายในรูปภาพ */
+a.left, a.right {
+    text-decoration: none;
+    color: #0074a2;
+}
+
+/* สไตล์ภาพ */
+img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Chasumthing</h1>
+    </header>
+
+<!-- navbar ปุ่มback และ ปุ่ม log-out -->
+<nav>
+    <div class="back"><a href="admin_login.html"> <button>Back</button></a></div>
+    <div class="lo"> <A href="login.html"><button>Log-out</button></A></div>
+</nav>
+
+<br>
+
+
+<div class="first">
+    <!-- section one เมื่อกดเข้าไปจะเป็นการเข้าไปสู่หน้า ระบบสินค้า -->
+    <section class="one">
+        <h3>ระบบสินค้า</h3>
+        <a class = "left" href="/admin/insertproduct">
+            <img src="hyper1.jpg" alt="ข้อมูลสินค้า">
+        </a>
+    </section>
+
+
+    <!-- section two เมื่อกดเข้าไปจะเป็นการเข้าไปสู่ ข้อมูลผู้ใช้ -->
+    <section class="two">
+        <h3>ข้อมูลผู้ใช้</h3>
+        <a class = "right" href="/admin/insertadmin">
+            <img src="user.jpg" alt="ข้อมูลผู้ใช้">
+        </a>
+    </section>
+</div>
+</body>
+</html>

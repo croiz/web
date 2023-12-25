@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--หนดการเลื่อนและขยายหน้าเว็บให้เหมาะกับอุปกรณ์ที่ใช้ (responsive)-->
+    <title>เข้าสู่ระบบ | CHASUMTHING</title><!--กำหนดชื่อหน้าเว็บ-->
+    <!-- <link rel="stylesheet" href="LoginStyle.css">อมโยงไปยังไฟล์ CSS ชื่อ "LoginStyle.css" เพื่อใช้สไตล์หน้าเว็บ -->
+
+    <style>
+        
+/* กำหนดสำหรับทุก element ใน file */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*กำหนดสไตล์สำหรับโลโก้ (Logo) ซึ่งอยู่ในคลาส .container และมีลิงก์ <a> ที่อยู่ในโลโก้*/
+.container .Logo a img{
+    padding-top: 30px;
+    /* margin-right: 200px; */
+    width: 195px;
+    height: 130px;
+}
+/*กำหนดส่วนของหน้าเว็บโดยรวม*/
+body{
+    min-height: 100vh;
+    background: green;
+    display: flex;
+    font-family: sans-serif;
+}
+/*กำหนดสไตล์สำหรับคอนเทนเนอร์หลักที่บรรจุเนื้อหา*/
+.container{
+    margin: auto;
+    width: 500px;
+    max-width: 90%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+/*กำหนดสไตล์สำหรับแบบฟอร์ม*/
+.container form{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, .3);
+}
+/*กำหนดสไตล์สำหรับหัวข้อของแบบฟอร์ม*/
+.container form h1{
+    text-align: center;
+    margin-bottom: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid silver;
+}
+/*สไตล์สำหรับกล่องข้อมูลในแบบฟอร์ม (เช่น ช่องกรอกอีเมลและรหัสผ่าน)*/
+.container form .form-control{
+    width: 100%;
+    height: 40px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid silver;
+    margin: 10px 0 18px 0;
+    padding: 0 10px;
+}
+/*สไตล์สำหรับปุ่ม "เข้าสู่ระบบ" ในแบบฟอร์ม*/
+.container form .btn{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: green;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+/*ไตล์เมื่อปุ่มถูกโฮเวอร์ (hover) โดยมีการเปลี่ยนแปลงสีขอบ*/
+.container form .btn:hover{
+    border-color:black;
+    transition: .5s;
+}
+
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+  
+.pass:hover{
+    text-decoration: underline;
+}
+
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+.signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+}
+
+h3 {
+    overflow: hidden;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+  
+h3:before,
+h3:after {
+    background-color: silver;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+}
+  
+h3:before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+  
+h3:after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+
+.admin{
+    width: 100%;
+    height: 40px;
+    border: 1px solid;
+    background: darkblue;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+.admin:hover{
+    border-color: black;
+    transition: .5s;
+}
+    </style>
+</head>
+<body>
+
+
+    <!--ส่วนที่มีการจัดรูปแบบเนื้อหาทั้งหมดในหน้าเว็บ-->
+    <div class="container">
+        <div class = "Logo"><a href="home"><img src="Logo4.png" alt=""></a></div>
+        <!--แบบฟอร์มสำหรับกรอกข้อมูลเข้าสู่ระบบ-->
+        <form action="">
+            <h1>เข้าสู่ระบบ</h1>
+            <div class="form-group">
+                <label for="">username:</label>
+                <input type="email" id="user" class="form-control" placeholder="กรุณาใส่อีเมล" >
+            </div>
+            <div class="form-group">
+                <label for="">Password:</label>
+                <input type="password" id ="pwd" class="form-control" placeholder="กรุณากรอกรหัสผ่าน" >
+            </div>
+
+             <!-- ลิงก์กลับไปยังหน้าหลัก "home.html" โดยใช้ปุ่ม "เข้าสู่ระบบ" ในแท็ก-->
+                <input type="button" id="login"class="btn" value="เข้าสู่ระบบ">
+           
+            
+        
+
+            <h3>หรือ</h3>
+            <nav><!--ลิงก์ไปยังหน้าเข้าสู่ระบบแอดมิน -->
+             <a href="admin_login"><input type="button"  class="admin" value="เข้าสู่ระบบแอดมิน"></a>
+                    
+      
+            </nav>
+        </form>
+    </div>
+</body>
+    <script src="/js/callCustomerlogin.js">
+
+    </script>
+</html>
